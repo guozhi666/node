@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点击获取数据</button>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+<script>
+    $('#btn').click(function(){
+        //用jQuery发送ajax_post请求第一种方式  复杂方式
+        // $.ajax('http://loaclhost:3000/demo1', {
+        //     method:'GET',
+        //     data:{
+        //         name:'kobe',
+        //         age:12
+        //     },
+        //     success:function (data) {
+        //         console.log(data)
+        //     },
+        //     error:function (err) {
+        //         console.log(err);
+        //     }
+        // })
+
+
+        //用jQuery发送ajax_post请求第一种方式  复杂方式
+        // $.ajax('http://loaclhost:3000/demo2', {
+        //     method:'POST',
+        //     data:{
+        //         name:'kobe',
+        //         age:12
+        //     },
+        //     success:function (data) {
+        //         console.log(data)
+        //     },
+        //     error:function (err) {
+        //         console.log(err);
+        //     }
+        // })
+
+
+        //用jQuery发送ajax_get请求第二种方式  开发常用方式
+        $.get('http://loaclhost:3000/demo1',{name:'kobe', age:12},(data)=>{
+            console.log(data);
+        })
+
+        //用jQuery发送ajax_post请求第二种方式  开发常用方式
+        $.post('http://loaclhost:3000/demo2',{name:'kobe', age:12},(data)=>{
+            console.log(data);
+        })
+    })
+</script>
+</html>
