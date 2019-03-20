@@ -17,7 +17,7 @@
 <script type="text/javascript" src="js/jquery-1.10.1.js"></script>
 <script>
     $('#btn').click(function(){
-        //用jQuery发送ajax_post请求第一种方式  复杂方式
+        // 用jQuery发送ajax_post请求第一种方式  复杂方式
         // $.ajax('http://loaclhost:3000/demo1', {
         //     method:'GET',
         //     data:{
@@ -52,12 +52,12 @@
         //用jQuery发送ajax_get请求第二种方式  开发常用方式
         $.get('http://loaclhost:3000/demo1',{name:'kobe', age:12},(data)=>{
             console.log(data);
-        })
+        });
 
         //用jQuery发送ajax_post请求第二种方式  开发常用方式
         $.post('http://loaclhost:3000/demo2',{name:'kobe', age:12},(data)=>{
             console.log(data);
-        })
+        });
     })
 </script>
 </html>
